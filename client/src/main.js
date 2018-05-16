@@ -1,3 +1,5 @@
+import 'vuetify/dist/vuetify.min.css';
+
 import { sync } from 'vuex-router-sync';
 import Vuetify from 'vuetify';
 
