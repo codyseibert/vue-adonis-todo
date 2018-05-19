@@ -17,7 +17,7 @@
         <v-icon class="mr-2">fingerprint</v-icon>
         Login
       </v-btn>
-      <v-btn flat v-if="isLoggedIn">
+      <v-btn flat v-if="isLoggedIn" @click="logout">
         <v-icon class="mr-2">exit_to_app</v-icon>
         Logout
       </v-btn>
@@ -30,12 +30,17 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   computed: {
     ...mapGetters('authentication', [
       'isLoggedIn',
+    ]),
+  },
+  methods: {
+    ...mapActions('authentication', [
+      'logout',
     ]),
   },
 };
