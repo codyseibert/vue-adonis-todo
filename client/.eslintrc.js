@@ -7,5 +7,6 @@ module.exports = {
   rules: {
     'no-param-reassign': 'off',
     'arrow-body-style': 'off',
+    'consistent-return': 'off',
   }
 }
